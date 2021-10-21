@@ -53,17 +53,17 @@ function updateVolume(e) {
 
   if (newVolumeValue <= 0) //checks to change the icon 
   {
-    volumeImage.setAttribute("src", "/assets/icons/volume-level-0.svg");
+    volumeImage.setAttribute("src", "assets/icons/volume-level-0.svg");
   }
   else if(newVolumeValue >= 1 && newVolumeValue < 33)
   {
-    volumeImage.setAttribute("src", "/assets/icons/volume-level-1.svg");
+    volumeImage.setAttribute("src", "assets/icons/volume-level-1.svg");
   }
   else if(newVolumeValue >= 33 && newVolumeValue < 67){
-    volumeImage.setAttribute("src", "/assets/icons/volume-level-2.svg");
+    volumeImage.setAttribute("src", "assets/icons/volume-level-2.svg");
   }
   else if (newVolume >= 67) {
-    volumeImage.setAttribute("src", "/assets/icons/volume-level-3.svg");
+    volumeImage.setAttribute("src", "assets/icons/volume-level-3.svg");
   }
 }
 
