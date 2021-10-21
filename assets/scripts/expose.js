@@ -62,7 +62,7 @@ function updateVolume(e) {
   else if(newVolumeValue >= 33 && newVolumeValue < 67){
     volumeImage.setAttribute("src", "assets/icons/volume-level-2.svg");
   }
-  else if (newVolume >= 67) {
+  else if (newVolumeValue >= 67) {
     volumeImage.setAttribute("src", "assets/icons/volume-level-3.svg");
   }
 }
