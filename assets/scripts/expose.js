@@ -47,23 +47,22 @@ var volumeImage = document.querySelector("#volume-controls img");
 changeVolume.addEventListener('input', updateVolume);
 
 function updateVolume(e) {
-  var newVolumeValue = document.getElementById("volume").value; //get the vlaue of the current volume
-  document.getElementById("volume").value = newVolumeValue; //change the objects volume to the new volume
-  changeSound[0].volume = newVolumeValue / 100; //change the current svolume being played
+  var newVolumeValue = document.getElementById("volume").value; //get the vlaue of the current volume //50
+  changeSound[0].volume = newVolumeValue / 100; //change the current volume being played
 
   if (newVolumeValue <= 0) //checks to change the icon 
   {
-    volumeImage.setAttribute("src", "assets/icons/volume-level-0.svg");
+    volumeImage.setAttribute("src", "./assets/icons/volume-level-0.svg");
   }
   else if(newVolumeValue >= 1 && newVolumeValue < 33)
   {
-    volumeImage.setAttribute("src", "assets/icons/volume-level-1.svg");
+    volumeImage.setAttribute("src", "./assets/icons/volume-level-1.svg");
   }
   else if(newVolumeValue >= 33 && newVolumeValue < 67){
-    volumeImage.setAttribute("src", "assets/icons/volume-level-2.svg");
+    volumeImage.setAttribute("src", "./assets/icons/volume-level-2.svg");
   }
   else if (newVolumeValue >= 67) {
-    volumeImage.setAttribute("src", "assets/icons/volume-level-3.svg");
+    volumeImage.setAttribute("src", "./assets/icons/volume-level-3.svg");
   }
 }
 
