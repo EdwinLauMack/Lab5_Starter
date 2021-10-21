@@ -51,7 +51,7 @@ function updateVolume(e) {
   document.getElementById("volume").value = newVolumeValue; //change the objects volume to the new volume
   changeSound[0].volume = newVolumeValue / 100; //change the current svolume being played
 
-  if (newVolumeValue == 0) //checks to change the icon 
+  if (newVolumeValue <= 0) //checks to change the icon 
   {
     volumeImage.setAttribute("src", "/assets/icons/volume-level-0.svg");
   }
@@ -62,7 +62,7 @@ function updateVolume(e) {
   else if(newVolumeValue >= 33 && newVolumeValue < 67){
     volumeImage.setAttribute("src", "/assets/icons/volume-level-2.svg");
   }
-  else {
+  else if (newVolume >= 67) {
     volumeImage.setAttribute("src", "/assets/icons/volume-level-3.svg");
   }
 }
