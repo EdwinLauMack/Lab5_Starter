@@ -1,5 +1,7 @@
 // explore.js
 
+
+
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
@@ -28,11 +30,7 @@ function init() {
     voiceSelect.appendChild(option);
       clearInterval(timer);
     }
-
-    if (speechSynthesis.onvoiceschanged !== undefined) {
-      speechSynthesis.onvoiceschanged = populateVoiceList;
-    }
-    
+  
     document.querySelector('#explore button').onclick = function(event) {
       event.preventDefault();
     
