@@ -27,7 +27,7 @@ var playButton = document.querySelector('button');
 //if the play button is pressed, play the sound
 playButton.addEventListener('click', event => {
   changeSound[0].play();
-  if (changeSound[0].src.includes("party-horn")) //if the current sound src has "party-horn" in its source then we throw confetti
+  if (changeSound[0].src.includes("party-horn") && document.getElementById("volume").value != 0) //if the current sound src has "party-horn" in its source then we throw confetti
   {
     jsConfetti.addConfetti({
       emojis: ['🦄','🌈', '⚡️', '💥', '✨', '💫', '🌸'],
@@ -53,16 +53,20 @@ function updateVolume(e) {
   if (newVolumeValue <= 0) //checks to change the icon 
   {
     volumeImage.setAttribute("src", "./assets/icons/volume-level-0.svg");
+    document.querySelector('button').disabled = true;
   }
   else if(newVolumeValue >= 1 && newVolumeValue < 33)
   {
     volumeImage.setAttribute("src", "./assets/icons/volume-level-1.svg");
+    document.querySelector('button').disabled = false;
   }
   else if(newVolumeValue >= 33 && newVolumeValue < 67){
     volumeImage.setAttribute("src", "./assets/icons/volume-level-2.svg");
+    document.querySelector('button').disabled = false;
   }
   else if (newVolumeValue >= 67) {
     volumeImage.setAttribute("src", "./assets/icons/volume-level-3.svg");
+    document.querySelector('button').disbaled = false;
   }
 }
 
